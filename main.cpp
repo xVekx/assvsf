@@ -2,12 +2,13 @@
 #include <stdio.h>
 
 AssFormat AF;
-
+//ffmpeg -i input.srt output.ass
 int main(int argc, char *argv[])
 {
 	if(argc != 3)
 	{
 		qDebug()<<"Command format: assvsf in.ass out.ass";
+		return -1;
 	}
 	QString InFile(argv[1]);
 	QString OutFile(argv[2]);
